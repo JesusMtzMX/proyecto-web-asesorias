@@ -1,0 +1,17 @@
+.tabla-asesores thead th
+{
+    text-align: center;
+}
+
+.lista-asesores .tabla-asesores img
+{
+    text-align: center;
+    margin: 10px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.tabla-asesores tbody tr
+{
+    border-bottom: 1px solid;
+}
