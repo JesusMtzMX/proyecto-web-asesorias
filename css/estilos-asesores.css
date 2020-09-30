@@ -1,3 +1,44 @@
+:root
+{
+   /*--red:#b22eff;
+   --black:#252a34;
+   --blue:#08d9d6;
+   --white:#eaeaea;
+   --title:35px;
+   --text:19px;*/
+
+   /*PALETA 5*/
+   --gris-oscuro-contraste: #24244C;
+   --morado: #3F3250;
+   --strawberry: #E14658;
+   --ceniza: #C0B3A0;
+
+   /*PALETA 6*/
+    --gris-oscuro: #565656;
+    --vino: #76323F;
+    --beige: #C1A081;
+    --cloud: #D8CDC7;
+   /*PALETA 9*/
+
+   --indigo: #233460;
+   --celeste: #0078A7;
+   --gris: #848F95;
+   --gris-claro: #C9D2D1;
+
+   /*PALETA 13*/
+   --azul-bondi: #205765;
+   --celeste-2: #2A88B5;
+   --aqua: #37D9BF;
+   --sky-light: #E6FDFF;
+}
+
+.tabla-asesores, .tabla-agenda-asesores
+{
+    width: 90%;
+    border-bottom: 1px solid;
+    margin: 0.5rem 5% 1rem 5%;
+}
+
 .tabla-asesores thead th
 {
     text-align: center;
@@ -6,12 +47,69 @@
 .lista-asesores .tabla-asesores img
 {
     text-align: center;
-    margin: 10px;
+    margin: 2rem;
     width: 200px;
     border-radius: 50%;
 }
 
 .tabla-asesores tbody tr
 {
+    text-align: center;
+}
+
+.lista-asesores .tabla-asesores tbody td ul li
+{
+    list-style: none;
+}
+
+.titulo-asesores
+{
+    text-align: center;
+    margin-left: 1.5rem;
     border-bottom: 1px solid;
+    width: 90%;
+    margin: 1rem 5% 1rem 5%;
+}
+
+.agendar
+{
+    margin: 2rem;
+}
+
+.btn-agendar
+{
+    background-color: var(--vino);
+}
+
+.btn-agendar:hover
+{
+    background-color: var(--indigo);
+}
+
+.btn-agendar a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-agendar a:hover
+{
+    color: white;
+    font-weight: bold;
+}
+
+.agenda-titulo-asesores
+{
+    text-align: center;
+    margin-left: 1.5rem;
+    width: 90%;
+    margin: 4rem 5% 1rem 5%;
+}
+
+.lista-asesores .tabla-agenda-asesores tbody img
+{
+    text-align: center;
+    margin: 2rem;
+    width: 100px;
+    border-radius: 20%;
 }
