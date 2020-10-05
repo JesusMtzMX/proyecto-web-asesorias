@@ -21,10 +21,22 @@
   .content{
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 70%;
     z-index: 999;
     text-align: center;
-    padding: 50px 60px;
+    padding: 10px 60px;
+    width: 500px;
+    transform: translate(-50%,-50%);
+    background: rgba(21, 142, 163, 0.534);
+    box-shadow: -1px 1px 15px 0px white;
+  }
+  .content2{
+    position: absolute;
+    top: 50%;
+    left: -260px;
+    z-index: 999;
+    text-align: center;
+    padding: 30px 60px;
     width: 500px;
     transform: translate(-50%,-50%);
     background: rgba(21, 142, 163, 0.534);
