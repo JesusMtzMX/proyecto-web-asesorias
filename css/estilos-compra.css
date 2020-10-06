@@ -1,0 +1,88 @@
+:root
+{
+   /*--red:#b22eff;
+   --black:#252a34;
+   --blue:#08d9d6;
+   --white:#eaeaea;
+   --title:35px;
+   --text:19px;*/
+
+   /*PALETA 5*/
+   --gris-oscuro-contraste: #24244C;
+   --morado: #3F3250;
+   --strawberry: #E14658;
+   --ceniza: #C0B3A0;
+
+   /*PALETA 6*/
+    --gris-oscuro: #565656;
+    --vino: #76323F;
+    --beige: #C1A081;
+    --cloud: #D8CDC7;
+   /*PALETA 9*/
+
+   --indigo: #233460;
+   --celeste: #0078A7;
+   --gris: #848F95;
+   --gris-claro: #C9D2D1;
+
+   /*PALETA 13*/
+   --azul-bondi: #205765;
+   --celeste-2: #2A88B5;
+   --aqua: #37D9BF;
+   --sky-light: #E6FDFF;
+}
+
+.img-header
+{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to bottom right, var(--vino), var(--morado));
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.header-compra
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    margin-left: 2rem;
+    color: white;
+}
+
+.header-compra h1
+{
+    color: white;
+}
+
+.seleccionar-metodo
+{
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.tarjeta-credito, .tarjeta-debito, .paypal
+{
+    border: 1px solid var(--gris-oscuro-contraste);
+    display: inline-block;
+    margin: 10px;
+}
+
+.tarjeta-credito input, .tarjeta-debito input
+{
+    margin: 1rem;
+}
+
+.paypal a
+{
+    text-decoration: none;
+}
