@@ -1,3 +1,4 @@
+
 // Navegation Menu
 let btnMenu = document.querySelector('.btn-menu');
 let barIconX = document.querySelector('.btn-menu i');
@@ -10,18 +11,18 @@ btnMenu.addEventListener('click', (event) => {
   //Icon X
   barIconX.classList.toggle('fa-times');
 
-   if(activador){
-     menu.style.left = '0%'; 
-     menu.style.transition = '0.5s';
-  
-     activador = false;
-   }
-   else{
+  if (activador) {
+    menu.style.left = '0%';
+    menu.style.transition = '0.5s';
+
+    activador = false;
+  }
+  else {
     activador = false;
     menu.style.left = '-100%';
 
     activador = true;
-   }
+  }
 
 });
 
@@ -29,11 +30,11 @@ btnMenu.addEventListener('click', (event) => {
 let enlaces = document.querySelectorAll('.lists li a');
 
 enlaces.forEach((element) => {
-   
+
   element.addEventListener('click', (event) => {
-   enlaces.forEach((link) => {
-     link.classList.remove('active');
-   });
+    enlaces.forEach((link) => {
+      link.classList.remove('active');
+    });
     event.target.classList.add('active');
 
   });
@@ -42,39 +43,39 @@ enlaces.forEach((element) => {
 
 //Scroll Efect
 
- let prevScrollPos = window.pageYOffset;
- let goTop = document.querySelector('.go-top');
+let prevScrollPos = window.pageYOffset;
+let goTop = document.querySelector('.go-top');
 
 window.onscroll = () => {
-  
+
   //Hide & Show - Scroll Menu (Function)
   let currentScrollPos = window.pageYOffset;
 
   if (prevScrollPos > currentScrollPos) {
     menuContent.style.top = '0px';
     menuContent.style.transition = '0.5s';
-  }else{
+  } else {
     menuContent.style.top = '-60px';
     menuContent.style.transition = '0.5s';
   }
   prevScrollPos = currentScrollPos;
-  
+
   //Scoll Menu & Go Top & See Down (Styles)
   let arriba = window.pageYOffset;
 
   //Conditions
-  if(arriba <= 600){
+  if (arriba <= 600) {
     menuContent.style.borderBottom = 'none';
 
     //Ocultar Go Top
     goTop.style.right = '-100px';
-  }else{
+  } else {
     menuContent.style.borderBottom = '3px solid #ff2e63';
 
     //Mostrar Go Top
     goTop.style.right = '0px';
   }
-  
+
 }
 
 //Go Top Click
@@ -88,6 +89,54 @@ let abajo = document.querySelector('#abajo');
 abajo.addEventListener('click', () => {
   document.body.scrollTop = 600;
   document.documentElement.scrollTop = 600;
-  
+
 });
+
+
+
+////////////////////////////////
+const form = document.querySelector('form');
+const username = document.querySelector('usuario');
+const password = document.querySelector('password');
+
+form.addEventListener('submit', e => {
+  debugger;
+  e.preventDefault();
+
+  checkInputs();
+});
+
+function checkInputs() {
+  debugger;
+  // trim to remove the whitespaces
+  const usernameValue = username.value.trim();
+  const passwordValue = password.value.trim();
+
+  if (usernameValue === '') {
+    setErrorFor(username, 'Espacio en blanco');
+  } else {
+    setSuccessFor(username);
+  }
+
+
+
+  if (passwordValue === '') {
+    setErrorFor(password, 'Espacio en blanco');
+  } else {
+    setSuccessFor(password);
+  }
+
+}
+
+function setErrorFor(input, message) {
+  const formControl = input.parentElement;
+  const small = formControl.querySelector('small');
+  formControl.className = 'form error';
+  small.innerText = message;
+}
+
+function setSuccessFor(input) {
+  const formControl = input.parentElement;
+  formControl.className = 'field success';
+}
 
