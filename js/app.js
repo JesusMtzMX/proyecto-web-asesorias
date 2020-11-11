@@ -84,7 +84,7 @@ goTop.addEventListener('click', () => {
   document.documentElement.scrollTop = 0;
 });
 
-let abajo = document.querySelector('#abajo');
+let abajo = document.querySelector('#abajo'); // ---- REVISAR EL ORIGEN DE ESTE ID, PUES GENERA UN ERROR EN INDEX AL TRATAR DE BUSCARLO EN ESA PÁGINA
 
 abajo.addEventListener('click', () => {
   document.body.scrollTop = 600;
@@ -92,6 +92,16 @@ abajo.addEventListener('click', () => {
 
 });
 
+let btnEnviarComentario = document.querySelector('#btnEnviarComentario');
+
+function enviarComentario()
+{
+  Swal.fire(
+    'Comentario enviado',
+    '¡Muchas gracias! Su comentario ha sido enviado.',
+    'success'
+)
+}
 
 
 ////////////////////////////////
