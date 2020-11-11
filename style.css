@@ -115,7 +115,7 @@ body {
 }
 
 .form-control.error input {
-	border-color: #d6e73c;
+	border-color: #e7563c;
 }
 
 .form-control i {
@@ -131,7 +131,7 @@ body {
 }
 
 .form-control.error i.fa-exclamation-circle {
-	color: #fcff40;
+	color: #ff4040;
 	visibility: visible;
 }
 

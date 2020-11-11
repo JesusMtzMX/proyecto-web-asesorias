@@ -7,34 +7,44 @@
    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
   <body background="img/perfil.jpg">
-    <div class="perfil.jpg">
-
-        <div class="content">
-          <header id="header">Editar Perfil</header>
-          <form action="#">
-            <div class="field">
-                <span class="fa fa-user"></span>
-                <input type="text" required placeholder="Nuevo nombre completo">
-              </div>
-            <div class="field space">
-              <span class="fa fa-user"></span>
-              <input type="text" required placeholder="Nuevo Usuario">
-            </div>
-            <div class="field space">
-                <span class="fa fa-user"></span>
-                <input type="text" required placeholder="Nuevo correo electrónico">
-              </div>
-            <div class="field space">
-              <span class="fa fa-lock"></span>
-              <input type="password" class="pass-key" required placeholder="Nueva Contraseña">
-            </div><br>
-            <div class="field">
-              <input type="submit" value="GUARDAR CAMBIOS">
-            </div>
-            <a href="index.html">Volver</a>
+      <div class="container" id="body">
+        <div class="header">
+          <h2>Editar perfil</h2>
+        </div>
+        <form id="form" class="form">
+          <div class="form-control">
+            <label for="username">Nuevo usuario</label>
+            <input type="text" placeholder="Esmeralduchi22" id="username" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error</small>
+          </div>
+        	<div class="form-control">
+            <label for="username">Nuevo email</label>
+            <input type="email" placeholder="esmelopez536@gmail.com" id="email" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error</small>
+          </div>
+          <div class="form-control">
+            <label for="username">Nueva Contraseña</label>
+            <input type="password" placeholder="Contraseña" id="password"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error</small>
+          </div>
+       	<div class="form-control">
+            <label for="username">Confirmar contraseña</label>
+            <input type="password" placeholder="Confirmar contraseña" id="password2"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error</small>
+          </div><input type="submit" value="INICIAR SESION "><a>--></a><a href="index.html ">    Volver</a>
+    
+       
           </form>
-  
+          <script src="scriptsRegistro.js"></script>
 
-    </div>
+    
   </body>
 </html>
