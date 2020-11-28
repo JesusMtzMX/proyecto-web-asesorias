@@ -1,6 +1,6 @@
 <?php
-class Asesor {
-    public $idAsesor;
+class Asesorado {
+    public $idAsesorado;
     public $nombre;
     public $apellidos;
     public $email;
@@ -10,10 +10,10 @@ class Asesor {
 
     function __construct(){}
     
-    function __construct1($idAsesor,$nombre,$apellidos,
+    function __construct1($idAsesorado,$nombre,$apellidos,
                             $email,$claveAcceso,$telefono, $fotoPerfil)
     {
-        $this->idAsesor=$idAsesor;
+        $this->idAsesorado=$idAsesorado;
         $this->nombre=$nombre;
         $this->apellidos=$apellidos;
         $this->email=$email;
@@ -22,10 +22,10 @@ class Asesor {
         $this->fotoPerfil=$fotoPerfil;
     }
 
-    function __construct2($idAsesor,$nombre,$apellidos,
+    function __construct2($idAsesorado,$nombre,$apellidos,
                             $email,$claveAcceso,$telefono)
     {
-        $this->idAsesor=$idAsesor;
+        $this->idAsesorado=$idAsesorado;
         $this->nombre=$nombre;
         $this->apellidos=$apellidos;
         $this->email=$email;
