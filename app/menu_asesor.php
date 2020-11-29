@@ -18,15 +18,15 @@
           aria-haspopup="true" aria-expanded="false">Asesores</a>
 
         <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
-          <a href="lista-asesores.html">Ver asesores</a>
-          <a href="agendar-asesoria.html">Agendar</a>
-          <a href="donar-asesor.html">Donar</a>
+          <a href="lista-asesores.php">Ver asesores</a>
+          <a href="agendar-asesoria.php">Agendar</a>
+          <a href="donar-asesor.php">Donar</a>
           <a href="Reportar Asesor.html">Reportar</a>
         </div>
 
       </li>
 
-      <li><a href="chat-asesor.html">Chat</a></li>
+      <li><a href="chat-asesor.php">Chat</a></li>
       <li><a href="#acerca-de">Acerca de</a></li>
 
       <li class="nav-item dropdown">

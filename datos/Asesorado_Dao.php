@@ -1,8 +1,8 @@
 <?php
 require_once 'Conexion.php'; /*importa Conexion.php*/
-require_once '../modelo/Empleado.php'; /*importa el modelo */
+require_once '../modelo/Asesorado.php'; /*importa el modelo */
 
-class EmpleadoDao
+class Asesorado_Dao
 {
     
 	private $conexion; /*Crea una variable conexion*/
@@ -27,22 +27,29 @@ class EmpleadoDao
             
 			$lista = array(); /*Se declara una variable de tipo  arreglo que almacenará los registros obtenidos de la BD*/
 
-			$sentenciaSQL = $this->conexion->prepare("SELECT EmployeeId, FirstName, LastName, City, BirthDate FROM Employees"); /*Se arma la sentencia sql para seleccionar todos los registros de la base de datos*/
+			$sentenciaSQL = $this->conexion->prepare("SELECT idAsesorado, nombre, apellidos, email, claveAcceso, telefono, fotoPerfil
+			FROM asesorados"); /*Se arma la sentencia sql para seleccionar todos los registros de la base de datos*/
 			
 			$sentenciaSQL->execute();/*Se ejecuta la sentencia sql, retorna un cursor con todos los elementos*/
             
             /*Se recorre el cursor para obtener los datos*/
 			foreach($sentenciaSQL->fetchAll(PDO::FETCH_OBJ) as $fila)
 			{
-				$obj = new Empleado();
-                $obj->id = $fila->EmployeeId;
-	            $obj->nombre = $fila->FirstName;
-	            $obj->apellido = $fila->LastName;
-	            $obj->ciudad = $fila->City;
-	            $obj->fecha_nacimiento = $fila->BirthDate;
+				$obj = new Asesorado_Dao(
 
-                
-				$lista[] = $obj;
+					$obj->idAsesorado = $fila->idAsesorado;
+					$obj->Nombre = 	$fila->nombre;
+					$obj->Apellidos = $fila->apellidos;
+					$obj->Email = $fila->email;
+					$obj->ClaveAcceso = $fila->claveAcceso;
+					$obj->Telefono = $fila->telefono;
+					$obj->FotoPerfil = $fila->fotoPerfil;
+					
+					$lista[] = $obj;
+				);
+
+			
+				
 			}
             
 			return $lista;
@@ -56,7 +63,7 @@ class EmpleadoDao
 	}
     
     /*Metodo que obtiene un registro de la base de datos, retorna un objeto */
-	public function obtenerUno($id)
+	public function obtenerUno($idAsesorado)
 	{
 		try
 		{ 
@@ -64,18 +71,22 @@ class EmpleadoDao
             
 			$registro = null; /*Se declara una variable  que almacenará el registro obtenido de la BD*/
             
-			$sentenciaSQL = $this->conexion->prepare("SELECT EmployeeId, FirstName, LastName, City, BirthDate FROM Employees WHERE EmployeeId=?"); /*Se arma la sentencia sql para seleccionar todos los registros de la base de datos*/
-			$sentenciaSQL->execute([$id]);/*Se ejecuta la sentencia sql, retorna un cursor con todos los elementos*/
+			$sentenciaSQL = $this->conexion->prepare("SELECT idAsesorado, nombre, apellidos, email, claveAcceso, telefono, fotoPerfil
+			from asesorados WHERE idAsesorado=?"); /*Se arma la sentencia sql para seleccionar todos los registros de la base de datos*/
+			$sentenciaSQL->execute([$idAsesorado]);/*Se ejecuta la sentencia sql, retorna un cursor con todos los elementos*/
             
             /*Obtiene los datos*/
 			$fila=$sentenciaSQL->fetch(PDO::FETCH_OBJ);
 			
-            $registro = new Empleado();
-            $registro->id = $fila->EmployeeId;
-            $registro->nombre = $fila->FirstName;
-            $registro->apellido = $fila->LastName;
-            $registro->ciudad = $fila->City;
-            $registro->fecha_nacimiento = $fila->BirthDate;
+            $registro = new Asesorado_Dao();
+           			$registro->idAsesorado = $fila->idAsesorado;
+					$registro->Nombre = $fila->nombre;
+					$registro->Apellidos = $fila->apellidos;
+					$registro->Email = $fila->email;
+					$registro->ClaveAcceso = $fila->claveAcceso;
+					$registro->Telefono = $fila->telefono;
+					$registro->FotoPerfil = $fila->fotoPerfil;
+				
                 
 			
 			return $registro; //Registro es un Empleado (objeto Empleado)
@@ -89,15 +100,15 @@ class EmpleadoDao
 	}
     
     //Elimina el alumno con el id indicado como parámetro
-	public function eliminar($id)
+	public function eliminar($idAsesorado)
 	{
 		try 
 		{
 			$this->conectar();
             
-            $sentenciaSQL = $this->conexion->prepare("DELETE FROM Employees WHERE EmployeeId = ?");			          
+            $sentenciaSQL = $this->conexion->prepare("DELETE FROM asesorados WHERE idAsesorado = ?");			          
             
-			$sentenciaSQL->execute(array($id));
+			$sentenciaSQL->execute(array($idAsesorado));
             return true;
 		} catch (Exception $e) 
 		{
@@ -108,27 +119,28 @@ class EmpleadoDao
         
 	}
 
+	//FALTAAA
 	//Función para editar al alumno de acuerdo al objeto recibido como parámetro
-	public function editar(Empleado $obj)
+	public function editar(Asesorado_Dao $obj)
 	{
 		try 
 		{
-			$sql = "UPDATE Employees SET 
-                    FirstName = ?,
-                    LastName = ?,
-                    City = ?,
-					BirthDate= ?
-				    WHERE EmployeeId = ?";
+			$sql = "UPDATE asesorados SET 
+                    nombre = ?,
+                    email= ?,
+                    claveAcceso = ?,
+					claveAcceso= ?
+				    WHERE idAsesorado = ?";
 
             $this->conectar();
             
             $sentenciaSQL = $this->conexion->prepare($sql);			          
 			$sentenciaSQL->execute(
-				array(	$obj->nombre,
-						$obj->apellido,
-						$obj->ciudad,
-						$obj->fecha_nacimiento,
-						$obj->id )
+				array(	$obj->Nombre,
+						$obj->Email,
+						$obj->ClaveAcceso,
+						$obj->ClaveAcceso,
+						$obj->idAsesorado )
 					);
             return true;
 		} catch (Exception $e){
@@ -140,26 +152,31 @@ class EmpleadoDao
 	}
 
 	//Agrega un nuevo alumno de acuerdo al objeto recibido como parámetro
-	public function agregar(Empleado $obj)
+	public function agregar(Asesorado_Dao $obj)
 	{
         $clave=0;
 		try 
 		{
-            $sql = "INSERT INTO Employees (FirstName, LastName, City, BirthDate) values(?, ?, ?, ?)";
+            $sql = "INSERT INTO asesorados (idAsesorado, nombre, apellidos, email, claveAcceso, telefono, fotoPerfil) values(?, ?, ?, ?,?,?,?)";
             var_dump($sql);
             $this->conectar();
             $this->conexion->prepare($sql)
                  ->execute(
-                array($obj->nombre,
-						$obj->apellido,
-						$obj->ciudad,
-						$obj->fecha_nacimiento));
+                array($obj->idAsesorado,
+						$obj->Nombre,
+						$obj->Apellidos,
+						$obj->Email,
+						$obj->ClaveAcceso,
+						$obj->Telefono,
+						$obj->FotoPerfil
+						
+					));
             $clave=$this->conexion->lastInsertId();
-            var_dump($clave);
-            return $clave;
+            var_dump($idAsesorado);
+            return $idAsesorado;
 		} catch (Exception $e){
 			echo $e->getMessage();
-			return $clave;
+			return $idAsesorado;
 		}finally{
             
             /*
