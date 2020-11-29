@@ -25,39 +25,23 @@
 
     <!-- Menu de Navegacion -->
     <header id="header">
-        <nav class="menu">
-            <div class="logo-box">
-                <h1><a href="#">Asesorías</a></h1>
-                <span class="btn-menu"><i class="fas fa-bars"></i></span>
-            </div>
+        
+    <?php
+        session_start();
 
-            <div class="list-container">
-                <ul class="lists">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#lista-cursos">Cursos</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Cuenta</a>
-                        <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Iniciar sesión</a>
-                            <a class="dropdown-item" href="#">Crear cuenta</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                          aria-haspopup="true" aria-expanded="false">Asesores</a>
-                        <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
-                          <a href="lista-asesores.html">Ver asesores</a>
-                          <a href="agendar-asesoria.html">Agendar</a>
-                          <a href="donar-asesor.html">Donar</a>
-                          <a href="Reportar Asesor.html">Reportar</a>
-                        </div>
-                      </li>
-                    <li><a href="chat-asesor.html">Chat</a></li>
-                    <li><a href="#acerca-de">Acerca de</a></li>
-                </ul>
-            </div>
-        </nav>
+        if (session_id() === 'Asesor')
+        {
+        require_once "menu_asesor.php";
+        }
+        else if (session_id() === 'Asesorado')
+        {
+        require_once "menu_asesorado.php";
+        }
+        else
+        {
+        require_once "menu_inicial.php";
+        }
+    ?>
 
         <!-- Imagen Header -->
         <div class="img-header">

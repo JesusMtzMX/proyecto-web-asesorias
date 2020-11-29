@@ -25,37 +25,24 @@
 
     <!-- Menu de Navegacion -->
     <header id="header">
-        <nav class="menu">
-            <div class="logo-box">
-                <h1><a href="#">Asesorías</a></h1>
-                <span class="btn-menu"><i class="fas fa-bars"></i></span>
-            </div>
 
-            <div class="list-container">
-                <ul class="lists">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#lista-cursos" class="active">Cursos</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Cuenta</a>
-                        <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
-                            <a href="Inicio Sesion.html">Iniciar Sesión</a>
-                            <a href="Registro.html">Crear cuenta</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Asesores</a>
-                        <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
-                            <a href="Reportar Asesor.html">Reportar</a>
-                        </div>
-                    </li>
-                    <li><a href="chat-asesor.html">Chat</a></li>
-                    <li><a href="#acerca-de">Acerca de</a></li>
-                </ul>
-            </div>
+    <?php
+        session_start();
 
-        </nav>
+        if (session_id() === 'Asesor')
+        {
+        require_once "menu_asesor.php";
+        }
+        else if (session_id() === 'Asesorado')
+        {
+        require_once "menu_asesorado.php";
+        }
+        else
+        {
+        require_once "menu_inicial.php";
+        }
+    ?>
+
 
         <!-- Imagen Header -->
         <div class="img-header">
@@ -104,7 +91,7 @@
         <div id="lista-cursos" class="informacion">
 
             <table class="info-compra">
-                
+
             </table>
 
             <h4>Cursos X</h4>
@@ -115,7 +102,7 @@
                 rerum
                 labore.
             </p>
-           
+
         </div>
 
 
