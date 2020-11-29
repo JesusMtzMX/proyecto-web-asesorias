@@ -21,7 +21,7 @@
           <a href="lista-asesores.php">Ver asesores</a>
           <a href="agendar-asesoria.php">Agendar</a>
           <a href="donar-asesor.php">Donar</a>
-          <a href="Reportar Asesor.html">Reportar</a>
+          <a href="Reportar Asesor.php">Reportar</a>
         </div>
 
       </li>

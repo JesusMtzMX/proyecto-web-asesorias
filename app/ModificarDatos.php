@@ -49,7 +49,9 @@
         <i class="fas fa-exclamation-circle"></i>
         <small>Error</small>
       </div><input type="submit" value="INICIAR SESION "><a>--></a><a href="index.php "> Volver</a>
-
+      <div class="footer-text">
+          <p>&copy; Agencia de asesorías web - 2020</p>
+        </div>
     </form>
 
     <script src="scriptsRegistro.js"></script>

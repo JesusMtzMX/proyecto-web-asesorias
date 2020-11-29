@@ -35,7 +35,7 @@ class Comentario_Dao
             /*Se recorre el cursor para obtener los datos*/
 			foreach($sentenciaSQL->fetchAll(PDO::FETCH_OBJ) as $fila)
 			{
-				$obj = new Comentario_Dao(
+				$obj = new Comentario_Dao();
 
 					$obj->idComentario= $fila->idComentario;
 					$obj->Alumno = 	$fila->alumno;
@@ -44,7 +44,7 @@ class Comentario_Dao
 					$obj->IdCurso = $fila->idCurso;
 					
 					$lista[] = $obj;
-				);
+				
 
 			
 				

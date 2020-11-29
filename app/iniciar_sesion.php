@@ -52,7 +52,9 @@
 			</div>
 			<button type="submit" class="btn-entrar">ENTRAR</button>
 		</form>
-
+		<div class="footer-text">
+          <p>&copy; Agencia de asesorías web - 2020</p>
+        </div>
 	</div>
 
 	<!--<script src="scripts.js"></script>-->

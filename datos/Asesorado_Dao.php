@@ -35,7 +35,7 @@ class Asesorado_Dao
             /*Se recorre el cursor para obtener los datos*/
 			foreach($sentenciaSQL->fetchAll(PDO::FETCH_OBJ) as $fila)
 			{
-				$obj = new Asesorado_Dao(
+				$obj = new Asesorado_Dao();
 
 					$obj->idAsesorado = $fila->idAsesorado;
 					$obj->Nombre = 	$fila->nombre;
@@ -46,7 +46,7 @@ class Asesorado_Dao
 					$obj->FotoPerfil = $fila->fotoPerfil;
 					
 					$lista[] = $obj;
-				);
+				
 
 			
 				

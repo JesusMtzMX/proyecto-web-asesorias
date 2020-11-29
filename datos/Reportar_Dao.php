@@ -35,7 +35,7 @@ class Reportar_Dao
             /*Se recorre el cursor para obtener los datos*/
 			foreach($sentenciaSQL->fetchAll(PDO::FETCH_OBJ) as $fila)
 			{
-				$obj = new Reportar_Dao(
+				$obj = new Reportar_Dao();
 
 					$obj->idReporte = $fila->idReporte;
 					$obj->Motivo = 	$fila->motivo;
@@ -44,7 +44,7 @@ class Reportar_Dao
 					$obj->IdAsesorado = $fila->idAsesorado;
 					
 					$lista[] = $obj;
-				);
+				
 
 			
 				

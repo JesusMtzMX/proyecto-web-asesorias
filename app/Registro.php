@@ -11,45 +11,48 @@
       <div class="content">
         <header id="header">Registrarse como ASESOR</header>
         <form action="#">
-          <div class="field">
-            <span class="fa fa-user"></span>
-            <input type="text" required placeholder="Nombre Completo">
-          </div>
-          <div class="field space">
-            <span class="fa fa-user"></span>
-            <input type="text" required placeholder="Usuario">
-          </div>
-          <div class="field space">
-            <span class="fa fa-lock"></span>
-            <input type="password" class="pass-key" required placeholder="Contraseña">
-          </div>
-          <div class="field space">
-            <span class="fa fa-lock"></span>
-            <input type="password" class="pass-key" required placeholder="Confirmar contraseña">
-          </div>
-          <div class="field space">
-            <span class="fa fa-lock"></span>
-            <input type="email" class="pass-key" required placeholder="Correo electrónico">
-          </div>
-          <div class="field space">
-            <span class="fa fa-lock"></span>
-            <input type="text" class="pass-key" required placeholder="Código de la escuela">
-          </div><br>
+        <div class="field">
+              <span class="fa fa-user"></span>
+              <input type="text" required placeholder="Nombre">
+            </div>
+            <div class="field space">
+              <span class="fa fa-user"></span>
+              <input type="text" required placeholder="Apellidos">
+            </div>
+            <div class="field space">
+              <span class="fa fa-lock"></span>
+              <input type="email" class="" required placeholder="Email">
+            </div>
+            <div class="field space">
+              <span class="fa fa-lock"></span>
+              <input type="password" class="pass-key" required placeholder="Clave Acceso">
+            </div>
+            <div class="field space">
+              <span class="fa fa-lock"></span>
+              <input type="number" class="pass-key" required placeholder="Teléfono">
+            </div><br>
           <div class="field space">
             <input type="submit" value="REGISTRARSE">
           </div><br>
           <a href="iniciar_sesion.php">Volver</a>
         </form>
+        <div class="footer-text">
+          <p>&copy; Agencia de asesorías web - 2020</p>
+        </div>
         <div class="content2">
           <header id="header">Registrarse como ESTUDIANTE</header>
           <form action="#">
-            <div class="field">
+          <div class="field">
               <span class="fa fa-user"></span>
-              <input type="text" required placeholder="Nombre Completo">
+              <input type="text" required placeholder="Nombre">
             </div>
             <div class="field space">
               <span class="fa fa-user"></span>
-              <input type="text" required placeholder="Usuario">
+              <input type="text" required placeholder="Apellidos">
+            </div>
+            <div class="field space">
+              <span class="fa fa-lock"></span>
+              <input type="email" class="" required placeholder="Email">
             </div>
             <div class="field space">
               <span class="fa fa-lock"></span>
@@ -57,18 +60,19 @@
             </div>
             <div class="field space">
               <span class="fa fa-lock"></span>
-              <input type="password" class="pass-key" required placeholder="Confirmar contraseña">
-            </div>
-            <div class="field space">
-              <span class="fa fa-lock"></span>
-              <input type="email" class="pass-key" required placeholder="Correo electrónico">
+              <input type="number" class="pass-key" required placeholder="Teléfono">
             </div><br>
             <div class="field space">
               <input type="submit" value="REGISTRARSE">
             </div><br>
             <a href="iniciar_sesion.php">Volver</a>
           </form>
-  
+          <div class="footer-text">
+          <p>&copy; Agencia de asesorías web - 2020</p>
+        </div>
     </div>
+    
   </body>
+  
 </html>
+

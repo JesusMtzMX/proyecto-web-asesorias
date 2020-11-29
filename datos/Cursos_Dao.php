@@ -35,7 +35,7 @@ class Cursos_Dao
             /*Se recorre el cursor para obtener los datos*/
 			foreach($sentenciaSQL->fetchAll(PDO::FETCH_OBJ) as $fila)
 			{
-				$obj = new Cursos_Dao(
+				$obj = new Cursos_Dao();
 
 					$obj->idCurso= $fila->idCurso;
 					$obj->Nombre = 	$fila->nombre;
@@ -46,7 +46,7 @@ class Cursos_Dao
 					$obj->IdAsesor = $fila->idAsesor;
 					
 					$lista[] = $obj;
-				);
+				
 
 			
 				
