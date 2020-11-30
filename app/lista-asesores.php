@@ -49,8 +49,8 @@
                 <h1>Conoce a nuestros asesores</h1>
                 <hr>
                 <p>En la siguiente tabla encontrarás información acerca de los asesores que estarán dispuestos a
-                    ayudarte</p>
-
+                    ayudarte
+                </p>
             </div>
         </div>
 
@@ -66,7 +66,7 @@
             <br>
         </div>
             <br>
-        <table class="tabla-asesores">
+        <table class="table tabla-asesores">
             <thead>
                 <th> Foto perfil </th>
                 <th> Nombre </th>
@@ -134,14 +134,14 @@
         </div>
         <br>
         <div class="text-center">
-            <button class="btn btn-info btn-agendar"> <a href="agendar-asesoria.php"> AGENDAR ASESORÍA </a>  </button>
+            <button class="btn btn-info btn-agendar"> AGENDAR ASESORÍA </a>  </button>
         </div>
     </div>
     <div class="donar">
         <h2 class="text-center">¿Te gustaría hacer una donación?</h2>
         <br>
         <div class="text-center">
-            <button class="btn btn-info btn-agendar"> <a href="donar-asesor.php"> DONAR </a>  </button>
+            <button class="btn btn-info btn-agendar"> DONAR </a>  </button>
         </div>
     </div>
 
@@ -161,11 +161,10 @@
           </div>
         </div>
       </footer>
+      <input type="hidden" id="variable_sesion" value="<?php echo session_id() ?>">      
 
     <!-- Scripts -->
-    <script src="https://kit.fontawesome.com/35db202371.js"></script>
-    <script src="js/app.js"></script>
-
+    <script src="https://kit.fontawesome.com/35db202371.js"></script>    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -175,6 +174,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+    <script src="js/agendar-asesoria.js"></script>
 </body>
 
 </html>

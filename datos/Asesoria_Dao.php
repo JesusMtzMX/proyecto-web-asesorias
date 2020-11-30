@@ -152,13 +152,12 @@ class Asesoria_Dao
         $clave=0;
 		try 
 		{
-            $sql = "INSERT INTO asesorias (idAsesoria, idAsesor, idAsesorado, tema, tareaEstudio, fecha) values(?, ?, ?, ?,?,?)";
+            $sql = "INSERT INTO asesorias (idAsesoria, idAsesor, idAsesorado, tema, tareaEstudio, fecha) values(?, ?, ?, ?, ?, ?)";
             var_dump($sql);
             $this->conectar();
             $this->conexion->prepare($sql)
                  ->execute(
                 array($obj->idAsesoria,
-				
 					$obj->IdAsesor ,
 					$obj->IdAsesorado,
 					$obj->Tema ,

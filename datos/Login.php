@@ -45,7 +45,8 @@
             }
 
             session_start();
-            $_SESSION['username'] = $fila->Usuario;               
+            $_SESSION['usuarioID'] = $fila->UsuarioID;
+            $_SESSION['username'] = $fila->Usuario;
             header("location: ../app/index.php");
         }
         else

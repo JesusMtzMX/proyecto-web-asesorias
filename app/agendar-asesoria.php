@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Red+Hat+Text:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sweetalert/SweetAlert2/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/estilos-asesores.css">
 
@@ -42,6 +44,15 @@
         }
     ?>
 
+    <?php
+
+        require_once "../datos/Asesoria_Dao.php";
+        $dao=new Asesoria_Dao();
+
+
+
+    ?>
+
         <div class="skew-abajo">
         </div>
 
@@ -53,7 +64,7 @@
             <br>
         </div>
         <br>
-        <table class="tabla-agenda-asesores">
+        <table class="table tabla-agenda-asesores">
             <thead>
                 <th> Foto perfil </th>
                 <th> Nombre </th>
@@ -74,7 +85,7 @@
                         <li>Superación personal.</li>
                     </td>
                     <td>
-                        <button class="btn btn-info btn-agendar" type="submit">AGENDAR</button>
+                        <button class="btn btn-info btn-agendar" type="button" data-toggle="modal" data-target="#exampleModal">AGENDAR</button>
                     </td>
                 </tr>
                 <tr>
@@ -87,7 +98,7 @@
                         <li>Microcontroladores.</li>
                     </td>
                     <td>
-                        <button class="btn btn-info btn-agendar" type="submit">AGENDAR</button>
+                        <button class="btn btn-info btn-agendar" type="button" data-toggle="modal" data-target="#exampleModal">AGENDAR</button>
                     </td>
                 </tr>
                 <tr>
@@ -102,13 +113,15 @@
                         <li>Redes.</li>
                     </td>
                     <td>
-                        <button class="btn btn-info btn-agendar" type="submit">AGENDAR</button>
+                        <button class="btn btn-info btn-agendar" type="button" data-toggle="modal" data-target="#exampleModal">AGENDAR</button>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
     </main>
+
+    <?php include 'modal-agendar.php'?>
 
     <footer class="footer">
         <div class="skew-arriba"></div>
@@ -126,8 +139,7 @@
       </footer>
 
     <!-- Scripts -->
-    <script src="https://kit.fontawesome.com/35db202371.js"></script>
-    <script src="js/app.js"></script>
+    <script src="https://kit.fontawesome.com/35db202371.js"></script>    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -138,6 +150,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+    <script src="sweetalert/SweetAlert2/sweetalert2.all.min.js"></script>
+    <script src="js/seleccionar-asesor.js"></script>
 </body>
 
 </html>
