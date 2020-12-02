@@ -49,8 +49,8 @@
                 <h1>Conoce a nuestros asesores</h1>
                 <hr>
                 <p>En la siguiente tabla encontrarás información acerca de los asesores que estarán dispuestos a
-                    ayudarte
-                </p>
+                    ayudarte</p>
+
             </div>
         </div>
 
@@ -64,12 +64,18 @@
         <div class="titulo-asesores">
             <h1>ASESORES</h1>
             <br>
+            <form action="buscar-asignatura.php" method="get" class=form_search>
+            <input type="text" placeholder="Buscar usuario" name="palabra" id="btn-seach">
+            <input type="submit" value="Buscar" class="buscar">
+            </form>
+        
         </div>
             <br>
-        <table class="table tabla-asesores">
+        <table class="tabla-asesores">
             <thead>
                 <th> Foto perfil </th>
                 <th> Nombre </th>
+
                 <th> Información académica </th>
                 <th> Temas ofrecidos</th>
                 <th> Cursos ofrecidos</th>
@@ -100,13 +106,38 @@
                     <td>
                         <img src="img/asesor-2.png" alt="Musk">
                     </td>
-                    <td> Elon Musk
+                    <td> 
+                        Gustavo Ivan Vega
                     </td>
-                    <td> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <td> Lic. en Informatica <br> Profecional, con diplomado en informatica.
                     </td>
-                    <td> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <td> 
+                        <ul>
+                            <li>Arquitectura de computadoras</li>
+                            <li>Programación en redes</li>
+                            <li>Inteligencia Artificial</li>
+                        </ul>
                     </td>
-                    <td> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <td> Uso de software para transmision en vivo.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/asesor-4.jpg" alt="Mark">
+                    </td>
+                    <td>
+                        Alma Rosa Duran Castañeda
+                    </td>
+                    <td> Lic. en Derecho <br> Licenciada en derecho. Dispuesta ayudar
+                    </td>
+                    <td> 
+                        <ul>
+                            <li>Filosofia en Derecho</li>
+                            <li>Derecho Constitucional Mexicano</li>
+                            <li>Teoría del Delito</li>
+                        </ul>
+                    </td>
+                    <td> Uso de software para transmision en vivo.
                     </td>
                 </tr>
                 <tr>
@@ -114,13 +145,37 @@
                         <img src="img/asesor-3.png" alt="Mark">
                     </td>
                     <td>
-                        Mark Zuckerberg
+                        Pablo Rosiles Malagon
                     </td>
-                    <td> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <td> Lic. en Arquitectura <br> Profecional, comprometido y dispuesto a mejorar tus habilidades.
                     </td>
-                    <td> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <td> 
+                        <ul>
+                            <li>Dibujo Arquitectónico</li>
+                            <li>Geometría Descriptiva</li>
+                            <li>Sistemas Constructivos</li>
+                        </ul>
                     </td>
-                    <td> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <td> Uso de software para transmision en vivo.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/asesor-5.jpg" alt="Mark">
+                    </td>
+                    <td>
+                        Lucia Lopez Salas
+                    </td>
+                    <td> Lic. en Medicina <br> 
+                    </td>
+                    <td> 
+                        <ul>
+                            <li>Bioestadistica</li>
+                            <li>Fisica Medica</li>
+                            <li>Historia de la medicina</li>
+                        </ul>
+                    </td>
+                    <td> Uso de software para transmision en vivo.
                     </td>
                 </tr>
             </tbody>
@@ -134,14 +189,14 @@
         </div>
         <br>
         <div class="text-center">
-            <button class="btn btn-info btn-agendar"> AGENDAR ASESORÍA </a>  </button>
+            <button class="btn btn-info btn-agendar"> <a href="agendar-asesoria.php"> AGENDAR ASESORÍA </a>  </button>
         </div>
     </div>
     <div class="donar">
         <h2 class="text-center">¿Te gustaría hacer una donación?</h2>
         <br>
         <div class="text-center">
-            <button class="btn btn-info btn-agendar"> DONAR </a>  </button>
+            <button class="btn btn-info btn-agendar"> <a href="donar-asesor.php"> DONAR </a>  </button>
         </div>
     </div>
 
@@ -161,10 +216,11 @@
           </div>
         </div>
       </footer>
-      <input type="hidden" id="variable_sesion" value="<?php echo session_id() ?>">      
 
     <!-- Scripts -->
-    <script src="https://kit.fontawesome.com/35db202371.js"></script>    
+    <script src="https://kit.fontawesome.com/35db202371.js"></script>
+    <script src="js/app.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -174,7 +230,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-    <script src="js/agendar-asesoria.js"></script>
 </body>
 
 </html>
