@@ -81,27 +81,10 @@
                     <td>
                         <img src="img/asesor-2.png" alt="Musk">
                     </td>
-                    <td> Gustavo Ivan Vega
+                    <td> Elon Musk
                     <td>
-                        <li>Arquitectura de computadoras</li>
-                        <li>Programación en redes</li>
-                        <li>Inteligencia Artificial</li>
-                    </td>  
-                    <td>
-                        <button class="btn btn-info btn-agendar" type="submit">AGENDAR</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="img/asesor-4.jpg" alt="Alma">
-                    </td>
-                    <td>
-                    Alma Rosa Duran Castañeda
-                    </td>
-                    <td>
-                        <li>Filosofia en Derecho</li>
-                        <li>Derecho Constitucional Mexicano</li>
-                        <li>Teoría del Delito</li>
+                        <li>Matemáticas.</li>
+                        <li>Microcontroladores.</li>
                     </td>
                     <td>
                         <button class="btn btn-info btn-agendar" type="submit">AGENDAR</button>
@@ -109,31 +92,14 @@
                 </tr>
                 <tr>
                     <td>
-                        <img src="img/asesor-3.png" alt="Pablo">
+                        <img src="img/asesor-3.png" alt="Mark">
                     </td>
                     <td>
-                    Pablo Rosiles Malagon
+                        Mark Zuckerberg
                     </td>
                     <td>
-                        <li>Dibujo Arquitectónico</li>
-                        <li>Geometría Descriptiva</li>
-                        <li>Sistemas Constructivos</li>
-                    </td>
-                    <td>
-                        <button class="btn btn-info btn-agendar" type="submit">AGENDAR</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="img/asesor-5.jpg" alt="Lucy">
-                    </td>
-                    <td>
-                    Lucia Lopez Salas
-                    </td>
-                    <td>
-                        <li>Bioestadistica</li>
-                        <li>Fisica Medica</li>
-                        <li>Historia de la medicina</li>
+                        <li>Programación web.</li>
+                        <li>Redes.</li>
                     </td>
                     <td>
                         <button class="btn btn-info btn-agendar" type="submit">AGENDAR</button>

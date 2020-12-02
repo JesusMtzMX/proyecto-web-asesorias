@@ -64,18 +64,12 @@
         <div class="titulo-asesores">
             <h1>ASESORES</h1>
             <br>
-            <form action="buscar-asignatura.php" method="get" class=form_search>
-            <input type="text" placeholder="Buscar usuario" name="palabra" id="btn-seach">
-            <input type="submit" value="Buscar" class="buscar">
-            </form>
-        
         </div>
             <br>
         <table class="tabla-asesores">
             <thead>
                 <th> Foto perfil </th>
                 <th> Nombre </th>
-
                 <th> Información académica </th>
                 <th> Temas ofrecidos</th>
                 <th> Cursos ofrecidos</th>
@@ -106,38 +100,13 @@
                     <td>
                         <img src="img/asesor-2.png" alt="Musk">
                     </td>
-                    <td> 
-                        Gustavo Ivan Vega
+                    <td> Elon Musk
                     </td>
-                    <td> Lic. en Informatica <br> Profecional, con diplomado en informatica.
+                    <td> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </td>
-                    <td> 
-                        <ul>
-                            <li>Arquitectura de computadoras</li>
-                            <li>Programación en redes</li>
-                            <li>Inteligencia Artificial</li>
-                        </ul>
+                    <td> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </td>
-                    <td> Uso de software para transmision en vivo.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="img/asesor-4.jpg" alt="Mark">
-                    </td>
-                    <td>
-                        Alma Rosa Duran Castañeda
-                    </td>
-                    <td> Lic. en Derecho <br> Licenciada en derecho. Dispuesta ayudar
-                    </td>
-                    <td> 
-                        <ul>
-                            <li>Filosofia en Derecho</li>
-                            <li>Derecho Constitucional Mexicano</li>
-                            <li>Teoría del Delito</li>
-                        </ul>
-                    </td>
-                    <td> Uso de software para transmision en vivo.
+                    <td> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </td>
                 </tr>
                 <tr>
@@ -145,37 +114,13 @@
                         <img src="img/asesor-3.png" alt="Mark">
                     </td>
                     <td>
-                        Pablo Rosiles Malagon
+                        Mark Zuckerberg
                     </td>
-                    <td> Lic. en Arquitectura <br> Profecional, comprometido y dispuesto a mejorar tus habilidades.
+                    <td> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </td>
-                    <td> 
-                        <ul>
-                            <li>Dibujo Arquitectónico</li>
-                            <li>Geometría Descriptiva</li>
-                            <li>Sistemas Constructivos</li>
-                        </ul>
+                    <td> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </td>
-                    <td> Uso de software para transmision en vivo.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="img/asesor-5.jpg" alt="Mark">
-                    </td>
-                    <td>
-                        Lucia Lopez Salas
-                    </td>
-                    <td> Lic. en Medicina <br> 
-                    </td>
-                    <td> 
-                        <ul>
-                            <li>Bioestadistica</li>
-                            <li>Fisica Medica</li>
-                            <li>Historia de la medicina</li>
-                        </ul>
-                    </td>
-                    <td> Uso de software para transmision en vivo.
+                    <td> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </td>
                 </tr>
             </tbody>
